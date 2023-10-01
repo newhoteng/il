@@ -1,16 +1,18 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import NavBar from './components/NavBar';
-import HomePage from './components/HomePage';
-import CategoriesPage from './components/CategoriesPage';
+import Header from './components/Header';
+import Main from './components/Main';
+import ProductView from './components/ProductView';
+import ProductEdit from './components/ProductEdit';
 import './App.css';
 
 function App() {
   return (
-    <BrowserRouter basename="/Bookstore">
+    <BrowserRouter>
       <Routes>
-        <Route path="/" element={<NavBar />}>
-          <Route index element={<HomePage />} />
-          <Route path="/categories" element={<CategoriesPage />} />
+        <Route path="/" element={<Header />}>
+          <Route index element={<Main />} />
+          <Route path="/product" element={<ProductView />} />
+          <Route path="/product/edit" element={<ProductEdit />} />
           <Route path="/*" element={<div>Page not found</div>} />
         </Route>
       </Routes>

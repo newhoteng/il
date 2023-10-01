@@ -11,7 +11,7 @@ function Categories() {
   };
   return (
 
-    <div style={PageStyle}>PENDING</div>
+    <div style={PageStyle}>This is the product view page</div>
   );
 }
 
