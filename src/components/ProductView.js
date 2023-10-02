@@ -10,7 +10,6 @@ function Categories() {
     color: '#aeadad',
   };
   return (
-
     <div style={PageStyle}>This is the product view page</div>
   );
 }

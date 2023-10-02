@@ -1,55 +1,95 @@
-
-.search {
-  -webkit-transform: scaleX(-1);
-  transform: scaleX(-1);
-}
-
-.flexContainer {
+.header {
+  /* border: 1px solid red; */
+  background-color: #272e71;
+  color: #fff;
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  height: 55px;
+  width: 100%;
+  /* padding: 0 2rem; */
 }
 
 .nav {
-  font-family: 'Montserrat', sans-serif;
-  justify-content: space-between;
-  padding: 0.686rem 6.25rem;
+  /* border: 2px solid red; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  font-weight: 400;
+}
+
+.searchIcon {
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  /* border: 1px solid red; */
+  border-radius: 5px 0 0 5px;
+  height: 100%;
+  padding: 0 14px;
+  background-color: #fff;
+  /* font-size: 1.5rem; */
+}
+
+/* revisit */
+.search {
+  width: 31.25rem;
+  width: 500px;
+  height: 27px;
+  /* border: 1px solid red; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  border-radius: 5px;
+  color: #374151;
   background-color: #fff;
 }
 
-nav ul {
-  padding: 0;
-  gap: 2.5rem;
+input[type="search"] {
+  /* background-color: transparent; */
+  height: 100%;
+  /* width: 100%; */
+  flex: 1 1 100%;
+  outline: none;
+  border-radius: 5px 0 0 5px;
+  color: #374151;
+  padding: 0 9px;
+  border: none;
+  /* appearance: none; */
 }
 
-nav li {
-  list-style: none;
+input[type="search"]::placeholder {
+  color: #374151;
+  font-size: 0.75rem;
 }
 
-.nav li:nth-child(1) {
-  font-size: 1.875rem;
-  font-weight: bold;
-  letter-spacing: normal;
-  color: #0290ff;
-}
-
-nav li a {
-  text-decoration: none;
-  font-size: 0.813rem;
-  font-weight: normal;
-  color: #121212;
-}
-
-.profile {
-  justify-content: center;
-  width: 2.813rem;
-  height: 2.813rem;
-  border: solid 1px #e8e8e8;
+.userImage {
+  width: 25px;
+  height: 25px;
   border-radius: 50%;
+  border: 1px solid #fff;
 }
 
-.userIcon {
-  color: #0290ff;
-  width: 1.063rem;
-  height: 1.063rem;
+.menu {
+  /* border: 1px solid red; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 19px;
+  width: fit-content;
+}
+
+.menuIcons {
+  /* border: 1px solid blue; */
+  font-size: 1.1rem;
+}
+
+.menuPair {
+  /* border: 1px solid red; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5px;
+  flex-wrap: nowrap;
 }

@@ -1,5 +1,22 @@
+import { CiLocationOn } from 'react-icons/ci';
+import {
+  PiChatTeardropDotsThin, PiHouseSimpleThin,
+  PiShareNetworkThin, PiMapPinThin,
+} from 'react-icons/pi';
+import { BsChevronDown } from 'react-icons/bs';
+import { SlPeople } from 'react-icons/sl';
+
 export default function ProductEdit() {
   return (
-    <div>This is the edit page</div>
+    <div>
+      This is the edit page
+      <PiHouseSimpleThin />
+      <CiLocationOn />
+      <PiMapPinThin />
+      <PiChatTeardropDotsThin />
+      <BsChevronDown />
+      <SlPeople />
+      <PiShareNetworkThin />
+    </div>
   );
 }
