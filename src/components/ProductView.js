@@ -1,6 +1,9 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import { PiHouseSimpleLight, PiShareNetworkLight, PiCaretDownLight } from 'react-icons/pi';
+import PropTypes from 'prop-types';
+import {
+  PiHouseSimpleLight, PiShareNetworkLight, PiCaretDownLight, PiCaretRightBold,
+} from 'react-icons/pi';
 import { SlPeople } from 'react-icons/sl';
 import profileImage from '../images/HT2-cropped.jpg';
 import styles from '../styles/ProdView.module.css';
@@ -19,9 +22,9 @@ export function UserProfile() {
 
 function ProfileIcons({ icon, text, optionalIcon }) {
   return (
-    <div>
+    <div className={styles.profileIconCont}>
       {icon}
-      <p>{text}</p>
+      <p className={styles.text}>{text}</p>
       {optionalIcon}
     </div>
   );
@@ -36,12 +39,35 @@ export default function ProductView() {
         && (
           <aside className={styles.aside}>
             <UserProfile />
-            <ProfileIcons icon={<PiHouseSimpleLight />} text="Home" optionalIcon="" />
-            <ProfileIcons icon={<SlPeople />} text="Members" optionalIcon="" />
+            <ProfileIcons icon={<PiHouseSimpleLight />} text="Home" />
+            <ProfileIcons icon={<SlPeople />} text="Members" />
             <ProfileIcons icon={<PiShareNetworkLight />} text="Organizations" optionalIcon={<PiCaretDownLight />} />
           </aside>
         )}
-      <section className={styles.mainSection}>Main</section>
+      <section className={styles.mainSection}>
+        <div className={styles.header}>
+          <div className={styles.breadcrumbs}>
+            <PiHouseSimpleLight />
+            <PiCaretRightBold />
+            <span>Offers</span>
+            <PiCaretRightBold />
+            <span>Product Title</span>
+          </div>
+          <button type="button" className={styles.btn} style={{ backgroundColor: `${appConfData.mainColor}` }}>Edit</button>
+        </div>
+        Main
+      </section>
     </main>
   );
 }
+
+// Prop validations
+ProfileIcons.propTypes = {
+  icon: PropTypes.element.isRequired,
+  text: PropTypes.string.isRequired,
+  optionalIcon: PropTypes.element,
+};
+
+ProfileIcons.defaultProps = {
+  optionalIcon: <></>,
+};
