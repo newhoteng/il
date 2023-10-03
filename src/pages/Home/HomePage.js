@@ -1,6 +1,6 @@
 import React from 'react';
 
-function MainPage() {
+function HomePage() {
   const PageStyle = {
     height: 'calc(100vh - 60px)',
     display: 'flex',
@@ -14,4 +14,4 @@ function MainPage() {
   );
 }
 
-export default MainPage;
+export default HomePage;

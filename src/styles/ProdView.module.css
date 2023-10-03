@@ -23,12 +23,12 @@
   border-radius: 50%;
 }
 
-.profileDetails {
-  /* border: 1px solid orange; */
-  /* display: flex; */
-  /* flex-direction: column; */
-  /* width: fit-content; */
-}
+/* .profileDetails {
+  border: 1px solid orange;
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+} */
 
 .name {
   font-size: 18px;

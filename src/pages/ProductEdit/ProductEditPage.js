@@ -6,7 +6,7 @@ import {
 import { BsChevronDown } from 'react-icons/bs';
 import { SlPeople } from 'react-icons/sl';
 
-export default function ProductEdit() {
+export default function ProductEditPage() {
   return (
     <div>
       This is the edit page

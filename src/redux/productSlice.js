@@ -1,22 +1,22 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
-// API url and id
+// API url
 const APIBaseUrl = 'https://api-test.innoloft.com';
-const appId = process.env.REACT_APP_APP_ID || 1;
 
 const initialState = {
-  appConfData: {},
+  productData: {},
   isLoading: true,
   isError: undefined,
 };
 
-// Fetch app configuration data
-export const fetchAppConf = createAsyncThunk(
-  'appConfData/fetchAppConfiguration',
+// Fetch app configuration data ${APIBaseUrl}
+export const fetchProductData = createAsyncThunk(
+  'productData/fetchProductData',
   async () => {
     try {
-      const response = await axios.get(`${APIBaseUrl}/configuration/${appId}/`);
+      const response = await axios.get(`${APIBaseUrl}/product/6781/`);
+      // console.log(response);
       return response.data;
     } catch (error) {
       throw new Error(error.message);
@@ -24,28 +24,28 @@ export const fetchAppConf = createAsyncThunk(
   },
 );
 
-export const appConfigurationSlice = createSlice({
-  name: 'appConfData',
+export const productSlice = createSlice({
+  name: 'productData',
   initialState,
   reducers: {
 
   },
   extraReducers(builder) {
     builder
-      .addCase(fetchAppConf.pending, (state) => {
+      .addCase(fetchProductData.pending, (state) => {
         state.isLoading = true;
         state.isError = false;
       })
-      .addCase(fetchAppConf.fulfilled, (state, action) => {
+      .addCase(fetchProductData.fulfilled, (state, action) => {
         state.isLoading = false;
         state.isError = false;
-        state.appConfData = action.payload;
+        state.productData = action.payload;
       })
-      .addCase(fetchAppConf.rejected, (state) => {
+      .addCase(fetchProductData.rejected, (state) => {
         state.isError = true;
         state.isLoading = false;
       });
   },
 });
 
-export default appConfigurationSlice.reducer;
+export default productSlice.reducer;
