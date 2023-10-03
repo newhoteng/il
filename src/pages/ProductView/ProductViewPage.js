@@ -2,6 +2,9 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import styles from '../../styles/ProdView.module.css';
 import AsideUserInfo from '../../components/AsideUserInfo';
+import BreadCrumbs from '../../components/Breadcrumbs';
+import MainSection from './MainSection';
+import VideoSection from './VideoSection';
 
 export default function ProductView() {
   const { appConfData } = useSelector((store) => store.appConfData);
@@ -15,13 +18,9 @@ export default function ProductView() {
           <AsideUserInfo />
         )}
       <section className={styles.mainSection}>
-        Bread Crumbs
-        <div className={styles.productDetails}>
-          Main Section
-        </div>
-        <div className={styles.videoSection}>
-          VideoSection
-        </div>
+        <BreadCrumbs />
+        <MainSection />
+        <VideoSection />
         <div className={styles.productDetails}>
           Offer Details
         </div>

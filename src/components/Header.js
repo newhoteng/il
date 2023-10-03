@@ -17,10 +17,10 @@ function Header() {
 
   return (
     <>
-      {isError && <p>Something went wrong, please reload the page...</p>}
+      {isError && <p>Something went wrong, please reload the page.</p>}
 
       {isLoading ? (
-        <p>Loading...</p>
+        <header className={headerCSS.header} style={{ color: '#aeadad' }}>Loading...</header>
       ) : (
         <header className={headerCSS.header} style={{ backgroundColor: `${appConfData.mainColor}` }}>
           <img className={headerCSS.logo} src={appConfData.logo} alt="company logo" />

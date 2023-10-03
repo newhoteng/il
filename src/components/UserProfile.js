@@ -1,19 +1,17 @@
 import React from 'react';
-// import { useSelector } from 'react-redux';
 import PropTypes from 'prop-types';
-// import {
-//   PiHouseSimpleLight, PiShareNetworkLight, PiCaretDownLight, PiCaretRightBold,
-// } from 'react-icons/pi';
-// import { SlPeople } from 'react-icons/sl';
 import styles from '../styles/ProdView.module.css';
-// import headerCSS from '../styles/Header.module.css';
 
 // User profile component
 export function UserProfile({
-  profilePic, firstName, lastName, companyName,
+  profilePic, firstName, lastName, companyName, scale, origin,
 }) {
+  const resizeStyle = {
+    transform: `scale(${scale})`,
+    transformOrigin: `${origin}`,
+  };
   return (
-    <div className={styles.profileContainer}>
+    <div className={styles.profileContainer} style={resizeStyle}>
       <img className={styles.userImage} src={profilePic} alt="user" />
       <div className={styles.profileDetails}>
         <p className={styles.name}>{`${firstName} ${lastName}`}</p>
@@ -40,6 +38,13 @@ UserProfile.propTypes = {
   firstName: PropTypes.string.isRequired,
   lastName: PropTypes.string.isRequired,
   companyName: PropTypes.string.isRequired,
+  scale: PropTypes.number,
+  origin: PropTypes.string,
+};
+
+UserProfile.defaultProps = {
+  scale: 1,
+  origin: 'top left',
 };
 
 ProfileIcons.propTypes = {
