@@ -16,7 +16,7 @@ export default function BreadCrumbs() {
         <PiCaretRightBold />
         <span>{productData?.name}</span>
       </div>
-      <Link to="/product/edit">
+      <Link to="/product/edit" state={{ product: productData }}>
         <button type="button" className={styles.btn} style={{ backgroundColor: `${appConfData?.mainColor}` }}>Edit</button>
       </Link>
     </div>

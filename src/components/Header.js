@@ -22,26 +22,28 @@ function Header() {
       {isLoading ? (
         <header className={headerCSS.header} style={{ color: '#aeadad' }}>Loading...</header>
       ) : (
-        <header className={headerCSS.header} style={{ backgroundColor: `${appConfData.mainColor}` }}>
-          <img className={headerCSS.logo} src={appConfData.logo} alt="company logo" />
-          <div className={headerCSS.search}>
-            <input type="search" placeholder="Enter interests, keyword, company name, etc." />
-            <PiMagnifyingGlassLight className={headerCSS.searchIcon} />
-          </div>
-          <nav className={headerCSS.nav}>
-            <NavLink style={navLinkStyles} to="/">HOME</NavLink>
-            <NavLink style={navLinkStyles} to="/product">PRODUCT</NavLink>
-          </nav>
-          <div className={headerCSS.menu}>
-            <PiChatTeardropDotsLight className={headerCSS.menuIcons} />
-            <div className={headerCSS.menuPair}>
-              EN
-              <PiCaretDownLight className={headerCSS.menuIcons} />
+        <header style={{ backgroundColor: `${appConfData.mainColor}` }}>
+          <div className={headerCSS.header}>
+            <img className={headerCSS.logo} src={appConfData.logo} alt="company logo" />
+            <div className={headerCSS.search}>
+              <input type="search" placeholder="Enter interests, keyword, company name, etc." />
+              <PiMagnifyingGlassLight className={headerCSS.searchIcon} />
             </div>
-            <PiBellLight className={headerCSS.menuIcons} />
-            <div className={headerCSS.menuPair}>
-              <img className={headerCSS.userImage} src={productData.user?.profilePicture} alt="user" />
-              <PiCaretDownLight className={headerCSS.menuIcons} />
+            <nav className={headerCSS.nav}>
+              <NavLink style={navLinkStyles} to="/">HOME</NavLink>
+              <NavLink style={navLinkStyles} to="/product">PRODUCT</NavLink>
+            </nav>
+            <div className={headerCSS.menu}>
+              <PiChatTeardropDotsLight className={headerCSS.menuIcons} />
+              <div className={headerCSS.menuPair}>
+                EN
+                <PiCaretDownLight className={headerCSS.menuIcons} />
+              </div>
+              <PiBellLight className={headerCSS.menuIcons} />
+              <div className={headerCSS.menuPair}>
+                <img className={headerCSS.userImage} src={productData.user?.profilePicture} alt="user" />
+                <PiCaretDownLight className={headerCSS.menuIcons} />
+              </div>
             </div>
           </div>
         </header>

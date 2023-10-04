@@ -5,6 +5,7 @@ import AsideUserInfo from '../../components/AsideUserInfo';
 import BreadCrumbs from '../../components/Breadcrumbs';
 import MainSection from './MainSection';
 import VideoSection from './VideoSection';
+import OfferDetails from './OfferDetails';
 
 export default function ProductView() {
   const { appConfData } = useSelector((store) => store.appConfData);
@@ -21,9 +22,7 @@ export default function ProductView() {
         <BreadCrumbs />
         <MainSection />
         <VideoSection />
-        <div className={styles.productDetails}>
-          Offer Details
-        </div>
+        <OfferDetails />
       </section>
     </main>
   );

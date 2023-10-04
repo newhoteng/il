@@ -17,6 +17,8 @@ export default function MainSection() {
     city = `${productData.company.address.zipCode} ${productData.company.address.city.name}, ${productData.company.address.country.name}`;
   }
 
+  // {appConfData?.logo}
+
   return (
     <>
       {isError && <p>Something went wrong, please reload the page.</p>}
@@ -36,7 +38,7 @@ export default function MainSection() {
           </div>
           <div className={styles.userInfo}>
             <h3>Offered By</h3>
-            <img className={headerCSS.logo} src={appConfData?.logo} alt="company logo" />
+            <img className={headerCSS.logo} src={productData.company.logo} alt="company logo" />
             <UserProfile
               scale={0.75}
               profilePic={productData.user.profilePicture}
