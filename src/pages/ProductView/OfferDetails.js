@@ -27,10 +27,10 @@ export default function OfferDetails() {
       ) : (
         <section className={`${styles.productOffer} ${styles.sectionContainers}`}>
           <h3>Offer Details</h3>
-          <div>
+          <div className={styles.offers}>
             <OfferType icon={<PiGearSix className={styles.offerIcon} />} title="Categories" options={categories} />
             <OfferType icon={<LiaChessKnightSolid className={styles.offerIcon} />} title="Business Model" options={businessModels} />
-            <OfferType icon={<PiClockCountdownLight className={styles.offerIcon} />} title="TRL" options={[productData.trl.name]} />
+            <OfferType icon={<PiClockCountdownLight className={styles.offerIcon} />} title="TRL" options={[productData.trl.name.split('(')[0]]} />
             <OfferType icon={<CiBag1 className={styles.offerIcon} />} title="Investment Effort" options={[productData.investmentEffort]} />
           </div>
         </section>

@@ -2,7 +2,7 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import { PiLaptopLight, PiMapPinLight } from 'react-icons/pi';
 import styles from '../../styles/ProdView.module.css';
-import headerCSS from '../../styles/Header.module.css';
+//  import headerCSS from '../../styles/Header.module.css';
 import { UserProfile } from '../../components/UserProfile';
 
 export default function MainSection() {
@@ -38,7 +38,7 @@ export default function MainSection() {
           </div>
           <div className={styles.userInfo}>
             <h3>Offered By</h3>
-            <img className={headerCSS.logo} src={productData.company.logo} alt="company logo" />
+            <img className={styles.logo} src={productData.company.logo} alt="company logo" />
             <UserProfile
               scale={0.75}
               profilePic={productData.user.profilePicture}
@@ -46,16 +46,22 @@ export default function MainSection() {
               lastName={productData.user.lastName}
               companyName={productData.company.name}
             />
-            <div>
-              <PiMapPinLight />
+            <div className={styles.addressCont}>
+              <PiMapPinLight className={styles.addressIcon} />
               <p>
                 {street}
                 <br />
                 {city}
               </p>
             </div>
-            <div>
-              Google Map
+            <div className={styles.mapContainer}>
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2522.7809344896227!2d6.097925576553697!3d50.77963437165691!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c0995d36ff22ff%3A0x3a4248b50ce934de!2sJ%C3%BClicher%20Str.%2072a%2C%2052070%20Aachen%2C%20Germany!5e0!3m2!1sen!2sgh!4v1696415137968!5m2!1sen!2sgh"
+                allowfullscreen=""
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="company location map"
+              />
             </div>
           </div>
         </section>

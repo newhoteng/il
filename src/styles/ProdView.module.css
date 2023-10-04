@@ -172,6 +172,43 @@
   /* border: 3px solid burlywood; */
   width: calc(100% / 3);
   padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.logo {
+  width: 200px;
+  height: auto;
+}
+
+.addressCont {
+  /* border: 1px solid red; */
+  display: flex;
+  color: #6b7280;
+  font-size: 14px;
+  gap: 5px;
+  margin-top: -20px;
+}
+
+.addressIcon {
+  width: 16px;
+  height: 16px;
+}
+
+.addressCont p {
+  line-height: 20px;
+}
+
+.mapContainer {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+}
+
+.mapContainer iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
 }
 
 /* Continue userInfo styling */
@@ -213,10 +250,19 @@
   gap: 20px;
 }
 
+.offers {
+  display: grid;
+  grid: auto / 1fr 1fr;
+  gap: 20px;
+  border: 2px solid green;
+}
+
 .offerCont {
   border: 1px solid blue;
   display: flex;
   gap: 5px;
+  /* width: 100%; */
+  /* min-width: 48%; */
   /* width: fit-content; */
 }
 
@@ -228,10 +274,10 @@
   gap: 10px;
 }
 
-.textCont div,
+/* .textCont div,
 .textCont p {
   border: 1px solid green;
-}
+} */
 
 .textCont p {
   /* border: 1px solid green; */
@@ -253,7 +299,7 @@
   padding: 5px 14px;
   /* border: 1px solid red; */
   border-radius: 20px;
-  height: 24px;
+  /* height: 24px; */
   /* border-radius: 50%; */
 }
 
@@ -262,4 +308,10 @@
   width: 24px;
   height: 24px;
   color: #9ca3af;
+}
+
+@media all and (max-width: 992px) {
+  .offers {
+    grid: auto / 1fr;
+  }
 }
