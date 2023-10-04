@@ -9,8 +9,6 @@ import OfferDetails from './OfferDetails';
 
 export default function ProductView() {
   const { appConfData } = useSelector((store) => store.appConfData);
-  const { productData, isLoading, isError } = useSelector((store) => store.productData);
-  console.log(productData, isLoading, isError);
 
   return (
     <main className={styles.mainContainer}>

@@ -72,10 +72,6 @@
   font-size: 14px;
 }
 
-.breadcrumbs span:last-child {
-  font-weight: 600;
-}
-
 .btn {
   color: #fff;
   padding: 5px 10px;
@@ -131,6 +127,10 @@
   position: absolute;
   top: 0;
   background-color: #fff;
+}
+
+.breadcrumbs span:last-child {
+  font-weight: 600;
 }
 
 .softwareIcon {

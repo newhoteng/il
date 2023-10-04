@@ -8,7 +8,6 @@ import OfferType from '../../components/OfferType';
 
 export default function OfferDetails() {
   const { productData, isLoading, isError } = useSelector((store) => store.productData);
-  console.log(productData);
 
   const categories = productData.categories?.map((category) => (
     category.name
