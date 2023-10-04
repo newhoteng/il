@@ -8,9 +8,14 @@ function HomePage() {
     justifyContent: 'center',
     fontSize: '3rem',
     color: '#aeadad',
+    textAlign: 'center',
   };
   return (
-    <main style={PageStyle}>This is the homepage</main>
+    <main style={PageStyle}>
+      The home page is under construction.
+      <br />
+      Check out the product page.
+    </main>
   );
 }
 

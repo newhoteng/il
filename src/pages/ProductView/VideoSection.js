@@ -13,13 +13,15 @@ export default function VideoSection() {
       ) : (
         <section className={`${styles.productVideo} ${styles.sectionContainers}`}>
           <h3>Video</h3>
-          <div>
-            <iframe
-              src={productData.video.replace('watch?v=', 'embed/')}
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-              title="Rick"
-            />
+          <div className={styles.videoFixer}>
+            <div className={styles.vidCont}>
+              <iframe
+                src={productData.video.replace('watch?v=', 'embed/')}
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                title="Rick"
+              />
+            </div>
           </div>
         </section>
       )}
