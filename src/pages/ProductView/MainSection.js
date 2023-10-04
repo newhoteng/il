@@ -2,7 +2,6 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import { PiLaptopLight, PiMapPinLight } from 'react-icons/pi';
 import styles from '../../styles/ProdView.module.css';
-//  import headerCSS from '../../styles/Header.module.css';
 import { UserProfile } from '../../components/UserProfile';
 
 export default function MainSection() {
@@ -16,8 +15,6 @@ export default function MainSection() {
     street = `${productData.company.address.street} ${productData.company.address.house},`;
     city = `${productData.company.address.zipCode} ${productData.company.address.city.name}, ${productData.company.address.country.name}`;
   }
-
-  // {appConfData?.logo}
 
   return (
     <>
@@ -37,22 +34,24 @@ export default function MainSection() {
             <p>{productData.description}</p>
           </div>
           <div className={styles.userInfo}>
-            <h3>Offered By</h3>
-            <img className={styles.logo} src={productData.company.logo} alt="company logo" />
-            <UserProfile
-              scale={0.75}
-              profilePic={productData.user.profilePicture}
-              firstName={productData.user.firstName}
-              lastName={productData.user.lastName}
-              companyName={productData.company.name}
-            />
-            <div className={styles.addressCont}>
-              <PiMapPinLight className={styles.addressIcon} />
-              <p>
-                {street}
-                <br />
-                {city}
-              </p>
+            <div className={styles.text}>
+              <h3>Offered By</h3>
+              <img className={styles.logo} src={productData.company.logo} alt="company logo" />
+              <UserProfile
+                scale={0.75}
+                profilePic={productData.user.profilePicture}
+                firstName={productData.user.firstName}
+                lastName={productData.user.lastName}
+                companyName={productData.company.name}
+              />
+              <div className={styles.addressCont}>
+                <PiMapPinLight className={styles.addressIcon} />
+                <p>
+                  {street}
+                  <br />
+                  {city}
+                </p>
+              </div>
             </div>
             <div className={styles.mapContainer}>
               <iframe

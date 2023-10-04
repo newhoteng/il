@@ -1,5 +1,4 @@
 .mainContainer {
-  /* border: 5px solid blueviolet; */
   display: flex;
   align-items: flex-start;
   justify-content: center;
@@ -9,7 +8,6 @@
 }
 
 .profileContainer {
-  /* border: 1px solid red; */
   display: flex;
   align-items: center;
   gap: 15px;
@@ -24,18 +22,15 @@
 .name {
   font-size: 18px;
   font-weight: 600;
-  /* border: 1px solid green; */
   margin: 0;
 }
 
 .company {
   font-size: 14px;
-  /* border: 1px solid brown; */
   margin: 0;
 }
 
 .profileIconCont {
-  /* border: 1px solid red; */
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -49,34 +44,26 @@
 }
 
 .aside {
-  /* border: 1px solid blue; */
   width: calc(140px + 1.875rem + 8.85%);
-  /* min-width: calc(8.85% + 140px + 3rem); */
   display: flex;
   flex-direction: column;
   gap: 8px;
 }
 
 .mainSection {
-  /* border: 1px solid grey; */
-  /* width: 100%; */
   flex: 1 1 100%;
-  /* min-width: 80%; */
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
 .header {
-  /* border: 1px solid blue; */
   display: flex;
-  /* align-items: center; */
   align-items: self-start;
   justify-content: space-between;
 }
 
 .breadcrumbs {
-  /* border: 1px solid red; */
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -104,7 +91,6 @@
 }
 
 .sectionContainers h3 {
-  /* border: 1px solid red; */
   font-weight: 600;
   font-size: 16px;
 }
@@ -113,7 +99,6 @@
   display: flex;
   align-items: flex-start;
   justify-content: center;
-  /* border: 1px solid red; */
 }
 
 .product h3 {
@@ -122,17 +107,15 @@
 }
 
 .product {
-  width: calc(200% / 3);
+  min-width: calc(200% / 3);
   position: relative;
   border-right: 1px solid #e5e7eb;
-  /* border: 3px solid brown; */
 }
 
 .product img {
   width: 100%;
   aspect-ratio: 746 / 300;
   object-fit: cover;
-  /* border: 1px solid brown; */
 }
 
 .product span {
@@ -159,19 +142,22 @@
 }
 
 .product p {
-  /* border: 1px solid red; */
   font-size: 14px;
   line-height: 24px;
   text-align: justify;
   text-justify: inter-word;
   padding: 0 20px 20px;
-  /* font-weight: 600; */
 }
 
 .userInfo {
-  /* border: 3px solid burlywood; */
-  width: calc(100% / 3);
+  min-width: calc(100% / 3);
   padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.userInfo .text {
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -183,7 +169,6 @@
 }
 
 .addressCont {
-  /* border: 1px solid red; */
   display: flex;
   color: #6b7280;
   font-size: 14px;
@@ -210,8 +195,6 @@
   height: 100%;
   border: none;
 }
-
-/* Continue userInfo styling */
 
 .productVideo {
   padding: 20px;
@@ -243,7 +226,6 @@
 }
 
 .productOffer {
-  border: 1px solid red;
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -254,64 +236,84 @@
   display: grid;
   grid: auto / 1fr 1fr;
   gap: 20px;
-  border: 2px solid green;
 }
 
 .offerCont {
-  border: 1px solid blue;
   display: flex;
   gap: 5px;
-  /* width: 100%; */
-  /* min-width: 48%; */
-  /* width: fit-content; */
 }
 
 .offerCont .textCont {
-  border: 1px solid brown;
   color: #6b7280;
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 
-/* .textCont div,
 .textCont p {
-  border: 1px solid green;
-} */
-
-.textCont p {
-  /* border: 1px solid green; */
   font-size: 16px;
   height: 24px;
 }
 
-.textCont div {
+.offerItemCont {
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  flex-wrap: wrap;
   gap: 5px;
   font-size: 14px;
-
 }
 
 .offerItem {
   background-color: #e5e7eb;
   padding: 5px 14px;
-  /* border: 1px solid red; */
   border-radius: 20px;
-  /* height: 24px; */
-  /* border-radius: 50%; */
 }
 
 .offerIcon {
-  /* border: 1px solid red; */
   width: 24px;
   height: 24px;
   color: #9ca3af;
 }
 
 @media all and (max-width: 992px) {
+  .mainContainer {
+    margin: 0 1rem;
+  }
+
+  .aside {
+    display: none;
+  }
+
+  .mainSection {
+    width: 100%;
+  }
+
+  .userInfo {
+    flex-direction: row;
+    width: 100%;
+  }
+
+  .header {
+    gap: 20px;
+  }
+
+  .productDetails,
+  .header {
+    flex-direction: column;
+  }
+
+  .product {
+    border: none;
+  }
+
   .offers {
     grid: auto / 1fr;
+  }
+}
+
+@media all and (max-width: 600px) {
+  .userInfo {
+    flex-direction: column;
   }
 }

@@ -11,7 +11,7 @@ export default function OfferType({ icon, title, options = [] }) {
       <div>{icon}</div>
       <div className={styles.textCont}>
         <p>{title}</p>
-        <div>{items}</div>
+        <div className={styles.offerItemCont}>{items}</div>
       </div>
     </div>
   );

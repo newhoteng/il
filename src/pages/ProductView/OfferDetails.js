@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import { PiClockCountdownLight, PiGearSix } from 'react-icons/pi';
+import { PiClockCountdownLight, PiGearSixLight } from 'react-icons/pi';
 import { CiBag1 } from 'react-icons/ci';
 import { LiaChessKnightSolid } from 'react-icons/lia';
 import styles from '../../styles/ProdView.module.css';
@@ -28,7 +28,7 @@ export default function OfferDetails() {
         <section className={`${styles.productOffer} ${styles.sectionContainers}`}>
           <h3>Offer Details</h3>
           <div className={styles.offers}>
-            <OfferType icon={<PiGearSix className={styles.offerIcon} />} title="Categories" options={categories} />
+            <OfferType icon={<PiGearSixLight className={styles.offerIcon} />} title="Categories" options={categories} />
             <OfferType icon={<LiaChessKnightSolid className={styles.offerIcon} />} title="Business Model" options={businessModels} />
             <OfferType icon={<PiClockCountdownLight className={styles.offerIcon} />} title="TRL" options={[productData.trl.name.split('(')[0]]} />
             <OfferType icon={<CiBag1 className={styles.offerIcon} />} title="Investment Effort" options={[productData.investmentEffort]} />
