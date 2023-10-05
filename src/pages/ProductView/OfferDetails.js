@@ -19,10 +19,13 @@ export default function OfferDetails() {
 
   return (
     <>
-      {isError && <p>Something went wrong, please reload the page.</p>}
+      {isError
+        && (
+        <section className={`${styles.loading} ${styles.sectionContainers}`}>Something went wrong, please reload the page.</section>
+        )}
 
       {isLoading ? (
-        <section className={`${styles.sectionContainers}`}>Loading...</section>
+        <section className={`${styles.loading} ${styles.sectionContainers}`}>Loading...</section>
       ) : (
         <section className={`${styles.productOffer} ${styles.sectionContainers}`}>
           <h3>Offer Details</h3>

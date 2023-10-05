@@ -5,6 +5,7 @@ import {
   PiChatTeardropDotsLight, PiBellLight, PiCaretDownLight, PiMagnifyingGlassLight,
 } from 'react-icons/pi';
 import headerCSS from '../styles/Header.module.css';
+// import styles from '../styles/ProdView.module.css';
 
 function Header() {
   const { appConfData, isLoading, isError } = useSelector((store) => store.appConfData);
@@ -17,7 +18,10 @@ function Header() {
 
   return (
     <>
-      {isError && <p>Something went wrong, please reload the page.</p>}
+      {isError
+        && (
+        <header className={headerCSS.header}>Something went wrong, please reload the page.</header>
+        )}
 
       {isLoading ? (
         <header className={headerCSS.header} style={{ color: '#aeadad' }}>Loading...</header>

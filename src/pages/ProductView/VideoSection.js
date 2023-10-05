@@ -6,10 +6,13 @@ export default function VideoSection() {
   const { productData, isLoading, isError } = useSelector((store) => store.productData);
   return (
     <>
-      {isError && <p>Something went wrong, please reload the page.</p>}
+      {isError
+        && (
+        <section className={`${styles.loading} ${styles.sectionContainers}`}>Something went wrong, please reload the page.</section>
+        )}
 
       {isLoading ? (
-        <section className={`${styles.sectionContainers}`}>Loading...</section>
+        <section className={`${styles.loading} ${styles.sectionContainers}`}>Loading...</section>
       ) : (
         <section className={`${styles.productVideo} ${styles.sectionContainers}`}>
           <h3>Video</h3>

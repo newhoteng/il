@@ -141,6 +141,18 @@
   border-radius: 6px 0;
 }
 
+.trashIcon {
+  width: 40px;
+  height: 40px;
+  padding: 10px;
+  color: #6B7280;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #fff;
+  border-radius: 0 6px;
+}
+
 .product p {
   font-size: 14px;
   line-height: 24px;
@@ -198,6 +210,24 @@
 
 .productVideo {
   padding: 20px;
+}
+
+.videoInputCont {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+}
+
+.videoInput {
+  height: 38px;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+  padding: 0 10px;
+}
+
+.videoInput::placeholder {
+  color: #6B7280;
 }
 
 .videoFixer {
@@ -276,6 +306,14 @@
   color: #9ca3af;
 }
 
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: calc((100vh - 95px) / 3);
+  color: #aeadad;
+}
+
 @media all and (max-width: 992px) {
   .mainContainer {
     margin: 0 1rem;
@@ -292,6 +330,10 @@
   .userInfo {
     flex-direction: row;
     width: 100%;
+  }
+
+  .userInfo .text {
+    width: 50%;
   }
 
   .header {
