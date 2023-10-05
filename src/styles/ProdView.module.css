@@ -314,6 +314,31 @@
   color: #aeadad;
 }
 
+.editBtnCont {
+  padding: 20px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.editBtnCont button {
+  border-radius: 6px;
+  padding: 5px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  font-size: 14px;
+  height: 30px;
+  border: none;
+  color: #6B7280;
+  background-color: #fff;
+}
+
+.editBtnCont .saveBtn {
+  color: #fff;
+  background-color: #9496b9;
+}
+
 @media all and (max-width: 992px) {
   .mainContainer {
     margin: 0 1rem;
