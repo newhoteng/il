@@ -12,9 +12,7 @@ function HomePage() {
   };
   return (
     <main style={PageStyle}>
-      The home page is under construction.
-      <br />
-      Check out the product page.
+      <h5>This is the home page</h5>
     </main>
   );
 }

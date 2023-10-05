@@ -20,8 +20,8 @@ export default function MainSectionEdit() {
           {data.type}
         </span>
         <PiTrashLight className={`${styles.trashIcon}`} />
-        <h3><input name="name" type="text" required value={data.name} className={styles.videoInput} /></h3>
-        {/* <h3>{data.name}</h3> */}
+        <h3><input name="name" type="text" required defaultValue={data.name} className={styles.videoInput} /></h3>
+        {/* value={data.name} */}
         <p>{data.desc}</p>
         <div className={styles.editBtnCont}>
           <button type="button">Cancel</button>
