@@ -114,7 +114,7 @@
   object-fit: cover;
 }
 
-.product span {
+.product .category {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -339,6 +339,11 @@
 .editBtnCont .saveBtn {
   color: #fff;
   background-color: #9496b9;
+}
+
+.richEdit {
+  margin: 0 20px;
+  border-radius: 6px;
 }
 
 @media all and (max-width: 992px) {
