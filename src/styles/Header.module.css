@@ -31,6 +31,7 @@
   padding: 0 14px;
   background-color: #fff;
   box-sizing: content-box;
+  color: #374151;
 }
 
 .search {
@@ -45,7 +46,7 @@
   margin: 0 auto 0 8.85%;
 }
 
-input[type="search"] {
+.input {
   height: 100%;
   flex: 1 1 100%;
   outline: none;
@@ -55,7 +56,7 @@ input[type="search"] {
   border: none;
 }
 
-input[type="search"]::placeholder {
+.input::placeholder {
   color: #374151;
   font-size: 0.75rem;
 }

@@ -31,7 +31,7 @@ export default function MainSectionEdit() {
         </div>
         <div className={styles.editBtnCont}>
           <button type="button">Cancel</button>
-          <button type="button" className={styles.saveBtn}>
+          <button type="button" className="bg-primary-50 text-white">
             <PiCheckBold />
             Save
           </button>
@@ -41,3 +41,4 @@ export default function MainSectionEdit() {
     </section>
   );
 }
+// className={styles.saveBtn}

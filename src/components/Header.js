@@ -5,11 +5,11 @@ import {
   PiChatTeardropDotsLight, PiBellLight, PiCaretDownLight, PiMagnifyingGlassLight,
 } from 'react-icons/pi';
 import headerCSS from '../styles/Header.module.css';
-// import styles from '../styles/ProdView.module.css';
 
 function Header() {
   const { appConfData, isLoading, isError } = useSelector((store) => store.appConfData);
   const { productData } = useSelector((store) => store.productData);
+  console.log(appConfData);
 
   // Style for active link
   const navLinkStyles = ({ isActive }) => ({
@@ -26,11 +26,11 @@ function Header() {
       {isLoading ? (
         <header className={headerCSS.header} style={{ color: '#aeadad' }}>Loading...</header>
       ) : (
-        <header style={{ backgroundColor: `${appConfData.mainColor}` }}>
+        <header className="bg-primary">
           <div className={headerCSS.header}>
             <img className={headerCSS.logo} src={appConfData.logo} alt="company logo" />
             <div className={headerCSS.search}>
-              <input type="search" placeholder="Enter interests, keyword, company name, etc." />
+              <input type="search" placeholder="Enter interests, keyword, company name, etc." className={headerCSS.input} />
               <PiMagnifyingGlassLight className={headerCSS.searchIcon} />
             </div>
             <nav className={headerCSS.nav}>

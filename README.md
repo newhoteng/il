@@ -11,6 +11,7 @@
   - [Prerequisites](#prerequisites)
   - [Setup](#setup)
   - [Install](#install)
+  - [Usage](#usage)
 - [👥 Authors](#authors)
 - [🔭 Future Features](#future-features)
 - [🤝 Contributing](#contributing)
@@ -18,33 +19,34 @@
 - [🙏 Acknowledgements](#acknowledgements)
 - [📝 License](#license)
 
-#  :open_book: Bookstore <a name="about-project"></a>
-Bookstore is a website that displays a list of books and allow users to add or remove a selected book.
+#  :open_book: IL <a name="about-project"></a>
+A take-home exercise.
+
 
 ## :hammer_and_wrench: Built With <a name="built-with"></a>
 ### Tech Stack
 <details><summary>Client</summary>
 <ul>
-  <li><a href="https://html.com/">React</a></li>
+  <li><a href="https://html.com/">HTML</a></li>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a></li>
+  <li><a href="https://tailwindcss.com/">Tailwind</a></li>
 </ul>
 </details>
 <details><summary>Backend</summary>
 <ul>
-  <li><a href='https://www.notion.so/Bookstore-API-51ea269061f849118c65c0a53e88a739'>Bookstore API</a></li>
+  <li><a>API</a></li>
 </ul>
 </details>
 
 ### Key Features
-  - Display a list of books
-  - A form to add new book
-  - Button to remove a selected book
-  - Single Page Application
-  - Styled using CSS modules
+  - Home page (underconstruction)
+  - Product view Page
+  - Product edit page
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## :rocket: Live Demo <a name="live-demo"></a>
-- [Bookstore](https://newhoteng.github.io/Bookstore/)
+## :rocket: Live Demo
+- [Live Demo](https://innoloft-tmn0.onrender.com/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -53,24 +55,37 @@ To get a local copy up and running, follow these steps.<br>
 
 ### Prerequisites
 
-In order to run this project you need:
+You need the following tools be installed in your computer:
+
 - [Node.js](https://nodejs.org/en) installed on your machine
-- Text editor
+- [Git](https://www.linode.com/docs/guides/how-to-install-git-on-linux-mac-and-windows/)
+- IDE (VSCode)
 
 ### Setup
 
 Clone this repository to your desired folder:<br>
-```
-git clone https://github.com/newhoteng/Bookstore.git
+```sh
+  cd my-prefered-folder
+
+  git clone https://github.com/newhoteng/il.git
 ```
 
 ### Install
 
 Install this project with:<br>
-```
-npm install
+```sh
+  cd il
+
+  npm install
 ```
 
+### Usage
+
+To run the project, execute the following command:
+
+```sh
+  npm start
+```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -83,28 +98,28 @@ npm install
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## :telescope: Future Features <a name="future-features"></a>
-  - Category Page
+  - Completed home page
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## :handshake: Contributing <a name="contributing"></a>
 Contributions, issues, and feature requests are welcome!
-Feel free to check the [issues page](https://github.com/newhoteng/Math-magicians/issues).
+Feel free to check the [issues page](../../issues/).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## :star: Show your support <a name="support"></a>
-If you like this project follow me on GitHub.
+If you like this project give it a star.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## :pray: Acknowledgements <a name="acknowledgements"></a>
-- Thanks to Microverse for encouraging me to do this project.
+- 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
   
 ## :memo: License <a name="license"></a>
-[License](https://github.com/newhoteng/Bookstore/blob/main/LICENSE)
+This project is [MIT](./LICENSE) licensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>

@@ -12,7 +12,7 @@ function HomePage() {
   };
   return (
     <main style={PageStyle}>
-      <h5>This is the home page</h5>
+      <h1 className="text-3xl font-medium">This is the home page</h1>
     </main>
   );
 }
