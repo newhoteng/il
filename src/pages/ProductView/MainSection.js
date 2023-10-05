@@ -23,7 +23,7 @@ export default function MainSection() {
         <section className={`${styles.productDetails} ${styles.sectionContainers}`}>
           <div className={styles.product}>
             <img className={styles.productImage} src={productData.picture} alt="loftOS" />
-            <span>
+            <span className={styles.category}>
               <PiLaptopLight className={styles.softwareIcon} style={{ backgroundColor: `${appConfData?.mainColor}` }} />
               {productData.type.name}
             </span>
