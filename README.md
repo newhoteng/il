@@ -65,7 +65,7 @@ You need the following tools be installed in your computer:
 
 Clone this repository to your desired folder:<br>
 ```sh
-  cd my-prefered-folder
+  cd prefered-folder
 
   git clone https://github.com/newhoteng/il.git
 ```
@@ -91,9 +91,9 @@ To run the project, execute the following command:
 
 ## :busts_in_silhouette: Authors <a name="authors"></a>
 :bust_in_silhouette: **Harriet Oteng**
-- GitHub: [@githubhandle](https://github.com/newhoteng)
-- Twitter: [@twitterhandle](https://twitter.com/HarrietOteng1)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/harriet-oteng-75554666/)
+- GitHub: [newhoteng](https://github.com/newhoteng)
+- Twitter: [@HarrietOteng1](https://twitter.com/HarrietOteng1)
+- LinkedIn: [harriet-oteng](https://www.linkedin.com/in/harriet-oteng-75554666/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

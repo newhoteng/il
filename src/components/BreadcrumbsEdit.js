@@ -2,7 +2,7 @@ import { useSelector } from 'react-redux';
 import styles from '../styles/ProdView.module.css';
 
 export default function BreadCrumbs() {
-  const { appConfData } = useSelector((store) => store.appConfData);
+  // const { appConfData } = useSelector((store) => store.appConfData);
   const { productData } = useSelector((store) => store.productData);
 
   return (
@@ -10,7 +10,7 @@ export default function BreadCrumbs() {
       <div className={styles.breadcrumbs}>
         <span>{productData?.name}</span>
       </div>
-      <button type="button" className={styles.btn} style={{ backgroundColor: `${appConfData?.mainColor}` }}>View Offer</button>
+      <button type="button" className={`${styles.btn} bg-primary`}>View Offer</button>
     </div>
   );
 }

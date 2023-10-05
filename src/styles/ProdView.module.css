@@ -336,6 +336,11 @@
   background-color: #fff;
 }
 
+.editBtnCont .saveBtn {
+  background-color: #9496b9;
+  color: #fff;
+}
+
 .richEdit {
   margin: 0 20px;
   border-radius: 6px;

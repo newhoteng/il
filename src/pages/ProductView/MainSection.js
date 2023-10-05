@@ -5,7 +5,6 @@ import styles from '../../styles/ProdView.module.css';
 import MainUserInfo from '../../components/MainUserInfo';
 
 export default function MainSection() {
-  const { appConfData } = useSelector((store) => store.appConfData);
   const { productData, isLoading, isError } = useSelector((store) => store.productData);
 
   return (
@@ -24,7 +23,7 @@ export default function MainSection() {
           <div className={styles.product}>
             <img className={styles.productImage} src={productData.picture} alt="loftOS" />
             <span className={styles.category}>
-              <PiLaptopLight className={styles.softwareIcon} style={{ backgroundColor: `${appConfData?.mainColor}` }} />
+              <PiLaptopLight className={`${styles.softwareIcon} bg-primary`} />
               {productData.type.name}
             </span>
             <h3>{productData.name}</h3>

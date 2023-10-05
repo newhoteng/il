@@ -4,7 +4,6 @@ import { PiHouseSimpleLight, PiCaretRightBold } from 'react-icons/pi';
 import styles from '../styles/ProdView.module.css';
 
 export default function BreadCrumbs() {
-  const { appConfData } = useSelector((store) => store.appConfData);
   const { productData, isLoading } = useSelector((store) => store.productData);
 
   const necessaryData = {
@@ -26,7 +25,7 @@ export default function BreadCrumbs() {
             <span>{productData?.name}</span>
           </div>
           <Link to="/product/edit" state={{ productInfo: necessaryData }}>
-            <button type="button" className={styles.btn} style={{ backgroundColor: `${appConfData?.mainColor}` }}>Edit</button>
+            <button type="button" className={`${styles.btn} bg-primary`}>Edit</button>
           </Link>
         </div>
       )}

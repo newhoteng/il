@@ -9,7 +9,6 @@ import headerCSS from '../styles/Header.module.css';
 function Header() {
   const { appConfData, isLoading, isError } = useSelector((store) => store.appConfData);
   const { productData } = useSelector((store) => store.productData);
-  console.log(appConfData);
 
   // Style for active link
   const navLinkStyles = ({ isActive }) => ({

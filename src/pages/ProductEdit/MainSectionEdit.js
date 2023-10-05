@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { useSelector } from 'react-redux';
 import { useLocation } from 'react-router-dom';
 import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
@@ -8,8 +7,6 @@ import styles from '../../styles/ProdView.module.css';
 import MainUserInfo from '../../components/MainUserInfo';
 
 export default function MainSectionEdit() {
-  const { appConfData } = useSelector((store) => store.appConfData);
-
   const location = useLocation();
   const data = location.state?.productInfo;
 
@@ -21,7 +18,7 @@ export default function MainSectionEdit() {
       <div className={styles.product}>
         <img className={styles.productImage} src={data.image} alt="loftOS" />
         <span className={styles.category}>
-          <PiLaptopLight className={styles.softwareIcon} style={{ backgroundColor: `${appConfData?.mainColor}` }} />
+          <PiLaptopLight className={`${styles.softwareIcon} bg-primary`} />
           {data.type}
         </span>
         <PiTrashLight className={`${styles.trashIcon}`} />
@@ -31,7 +28,7 @@ export default function MainSectionEdit() {
         </div>
         <div className={styles.editBtnCont}>
           <button type="button">Cancel</button>
-          <button type="button" className="bg-primary-50 text-white">
+          <button type="button" className={`${styles.saveBtn} bg-primary-50`}>
             <PiCheckBold />
             Save
           </button>
@@ -41,4 +38,3 @@ export default function MainSectionEdit() {
     </section>
   );
 }
-// className={styles.saveBtn}

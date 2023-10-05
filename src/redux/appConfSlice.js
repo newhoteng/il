@@ -17,6 +17,7 @@ export const fetchAppConf = createAsyncThunk(
   async () => {
     try {
       const response = await axios.get(`${APIBaseUrl}/configuration/${appId}/`);
+      document.documentElement.style.setProperty('--color-primary', response.data.mainColor);
       return response.data;
     } catch (error) {
       throw new Error(error.message);
