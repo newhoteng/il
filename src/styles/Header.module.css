@@ -92,7 +92,6 @@
 @media all and (max-width: 992px) {
   .header {
     justify-content: space-between;
-    margin: 0 1rem;
   }
 
   .nav {
@@ -102,5 +101,11 @@
   .search,
   .menu {
     display: none;
+  }
+}
+
+@media all and (max-width: 600px) {
+  .header {
+    padding: 0 1rem;
   }
 }

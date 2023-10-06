@@ -347,10 +347,6 @@
 }
 
 @media all and (max-width: 992px) {
-  .mainContainer {
-    margin: 0 1rem;
-  }
-
   .aside {
     display: none;
   }
@@ -389,5 +385,9 @@
 @media all and (max-width: 600px) {
   .userInfo {
     flex-direction: column;
+  }
+
+  .mainContainer {
+    padding: 20px 1rem;
   }
 }
