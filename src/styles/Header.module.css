@@ -4,8 +4,9 @@
   align-items: center;
   justify-content: center;
   height: 55px;
-  max-width: 1440px;
-  margin: 0 2rem;
+  max-width: 1504px;
+  margin: 0 auto;
+  padding: 0 2rem;
 }
 
 .logo {
