@@ -108,7 +108,7 @@
   border-right: 1px solid #e5e7eb;
 }
 
-.product img {
+.productImage {
   width: 100%;
   aspect-ratio: 746 / 300;
   object-fit: cover;
