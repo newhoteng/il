@@ -6,6 +6,7 @@ import MainUserInfo from '../../components/MainUserInfo';
 
 export default function MainSection() {
   const { productData, isLoading, isError } = useSelector((store) => store.productData);
+  const description = { __html: productData?.description };
 
   return (
     <>
@@ -27,7 +28,7 @@ export default function MainSection() {
               {productData.type.name}
             </span>
             <h3>{productData.name}</h3>
-            <p>{productData.description}</p>
+            <p dangerouslySetInnerHTML={description} />
           </div>
           <MainUserInfo />
         </section>
