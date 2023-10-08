@@ -6,7 +6,7 @@ export default function OfferDetailsEdit() {
     <section className={`${styles.productOffer} ${styles.sectionContainers}`}>
       <h3>Offer Details</h3>
       <div className={styles.offers}>
-        <p className="text-red-500 font-medium">Pending</p>
+        <p className="text-red-600 font-medium">Pending</p>
       </div>
     </section>
   );

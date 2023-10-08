@@ -7,7 +7,6 @@ import ProductView from './pages/ProductView/ProductViewPage';
 import ProductEditPage from './pages/ProductEdit/ProductEditPage';
 import { fetchAppConf } from './redux/appConfSlice';
 import { fetchProductData } from './redux/productSlice';
-import './App.css';
 
 function App() {
   const dispatch = useDispatch();

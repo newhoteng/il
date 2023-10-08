@@ -10,16 +10,16 @@ export default function MainSectionEdit() {
   const location = useLocation();
   const data = location.state?.productInfo;
 
-  const [description, setDescription] = useState(data.desc);
-  const [title, setTitle] = useState(data.name);
+  const [description, setDescription] = useState(data?.desc);
+  const [title, setTitle] = useState(data?.name);
 
   return (
     <section className={`${styles.productDetails} ${styles.sectionContainers}`}>
       <div className={styles.product}>
-        <img className={styles.productImage} src={data.image} alt="loftOS" />
+        <img className={styles.productImage} src={data?.image} alt="loftOS" />
         <span className={styles.category}>
           <PiLaptopLight className={`${styles.softwareIcon} bg-primary`} />
-          {data.type}
+          {data?.type}
         </span>
         <PiTrashLight className={`${styles.trashIcon}`} />
         <h3><input name="name" type="text" required value={title} onChange={(e) => setTitle(e.target.value)} className={styles.videoInput} /></h3>
